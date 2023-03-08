@@ -11,9 +11,7 @@
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="46">
 				<table align="right" style="padding: 5px 15px; border: solid 1px black;">
-					<tr>
-						<td><strong>Kode. F-2.12</strong></td>
-					</tr>
+					<tr><td><strong>Kode. F-2.12</strong></td></tr>
 				</table>
 			</td>
 			<td>&nbsp;&nbsp;</td>
@@ -31,40 +29,32 @@
 			<td>:</td>
 			<td colspan="23"><strong><?= $config['nama_desa'] ?? str_pad(".", 60, ".", STR_PAD_LEFT); ?></strong></td>
 			<td colspan="5">Kode Wilayah</td>
-			<?php for ($i = 0; $i < 4; $i++) : ?>
+			<?php for ($i=0; $i<4; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($config['kode_desa'][$i])) : ?>
+					<?php if (isset($config['kode_desa'][$i])): ?>
 						<?= substr($config['kode_desa'], 6, 10)[$i]; ?>
-					<?php else : ?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
 			<?php endfor; ?>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
 	</table>
 
 	<table class="disdukcapil" style="margin-top: 0px;">
 		<col span="48" style="width: 2.0833%;">
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
 		<tr>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="48">
 				<table align="center" style="padding: 5px 15px; border: solid 1px black;">
-					<tr>
-						<td><strong style="font-size: 12pt;">FORMULIR PENCATATAN PERKAWINAN</strong></td>
-					</tr>
+					<tr><td><strong style="font-size: 12pt;">FORMULIR PENCATATAN PERKAWINAN</strong></td></tr>
 				</table>
 			</td>
 		</tr>
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
 		<tr>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="46">
@@ -77,11 +67,11 @@
 			<td colspan="2" class="kotak padat tengah">1.</td>
 			<td colspan="27" class="kotak">Nomor Induk Kependudukan (NIK)</td>
 			<td>&nbsp;&nbsp;</td>
-			<?php for ($i = 0; $i < 16; $i++) : ?>
+			<?php for ($i=0; $i<16; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['nik_pria'][$i])) : ?>
-						<?= $input['nik_pria'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['nik_pria'][$i])): ?>
+						<?= $input['nik_pria'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -93,11 +83,11 @@
 			<td colspan="2" class="kotak padat tengah">2.</td>
 			<td colspan="27" class="kotak">Nomor Kartu Keluarga (Nomor KK)</td>
 			<td>&nbsp;&nbsp;</td>
-			<?php for ($i = 0; $i < 16; $i++) : ?>
+			<?php for ($i=0; $i<16; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['kk_pria'][$i])) : ?>
-						<?= $input['kk_pria'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['kk_pria'][$i])): ?>
+						<?= $input['kk_pria'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -108,11 +98,11 @@
 			<td colspan="2" class="kotak padat tengah">3.</td>
 			<td colspan="27" class="kotak">Nomor Paspor</td>
 			<td>&nbsp;&nbsp;</td>
-			<?php for ($i = 0; $i < 16; $i++) : ?>
+			<?php for ($i=0; $i<16; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['dokumen_pasport_pria'][$i])) : ?>
-						<?= $input['dokumen_pasport_pria'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['dokumen_pasport_pria'][$i])): ?>
+						<?= $input['dokumen_pasport_pria'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -123,7 +113,7 @@
 			<td colspan="2" class="kotak padat tengah">4.</td>
 			<td colspan="9" class="kotak">Nama Lengkap</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="34" class="kotak"><?= $input['nama_pria'] ?></td>
+			<td colspan="34" class="kotak"><?= $input['nama_pria']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -131,11 +121,11 @@
 			<td colspan="2" class="kotak padat tengah">5.</td>
 			<td colspan="9" class="kotak">Tempat/Tanggal Lahir</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="18" class="kotak"><?= $input['tempat_lahir_pria'] ?></td>
+			<td colspan="18" class="kotak"><?= $input['tempat_lahir_pria']?></td>
 			<?php
-			$tgl = date('dd', strtotime($input['tanggal_lahir_pria']));
-			$bln = date('mm', strtotime($input['tanggal_lahir_pria']));
-			$thn = date('Y', strtotime($input['tanggal_lahir_pria']));
+				$tgl = date('dd', strtotime($input['tanggal_lahir_pria']));
+				$bln = date('mm', strtotime($input['tanggal_lahir_pria']));
+				$thn = date('Y', strtotime($input['tanggal_lahir_pria']));
 			?>
 			<td colspan="2" class="tengah">Tgl</td>
 			<?php for ($j = 0; $j < 2; $j++) : ?>
@@ -176,23 +166,23 @@
 			<td colspan="2" class="kotak padat tengah">6.</td>
 			<td colspan="9" class="kotak">Alamat</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="22" class="kotak"><?= $input['alamat_pria'] ?></td>
+			<td colspan="22" class="kotak"><?= $input['alamat_pria']?></td>
 			<td colspan="3" class="tengah">RT</td>
-			<?php for ($i = 0; $i < 3; $i++) : ?>
+			<?php for ($i=0; $i<3; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['rt_pria'][$i])) : ?>
-						<?= $input['rt_pria'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['rt_pria'][$i])): ?>
+						<?= $input['rt_pria'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
 			<?php endfor; ?>
 			<td colspan="3" class="tengah">RW</td>
-			<?php for ($i = 0; $i < 3; $i++) : ?>
+			<?php for ($i=0; $i<3; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['rw_pria'][$i])) : ?>
-						<?= $input['rw_pria'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['rw_pria'][$i])): ?>
+						<?= $input['rw_pria'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -201,22 +191,22 @@
 		<tr>
 			<td colspan="13">&nbsp;</td>
 			<td colspan="7" class="left">Kode Pos</td>
-			<?php for ($i = 0; $i < 5; $i++) : ?>
+			<?php for ($i=0; $i<5; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($config['kode_pos'][$i])) : ?>
-						<?= $config['kode_pos'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($config['kode_pos'][$i])): ?>
+						<?= $config['kode_pos'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
 			<?php endfor; ?>
 			<td colspan="5">&nbsp;</td>
 			<td colspan="5" class="left">Telepon</td>
-			<?php for ($i = 0; $i < 12; $i++) : ?>
+			<?php for ($i=0; $i<12; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['telepon_pria'][$i])) : ?>
-						<?= $input['telepon_pria'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['telepon_pria'][$i])): ?>
+						<?= $input['telepon_pria'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -224,19 +214,19 @@
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="13">&nbsp;</td>
+			<td colspan="13" >&nbsp;</td>
 			<td colspan="7" class="left">a. Desa/Kelurahan</td>
-			<td colspan="11" class="kotak"><?= $input['desapria']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['desapria'];?></td>
 			<td colspan="5" class="left">b. Kecamatan</td>
-			<td colspan="11" class="kotak"><?= $input['kecpria']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['kecpria'];?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="13">&nbsp;</td>
+			<td colspan="13" >&nbsp;</td>
 			<td colspan="7" class="left">c. Kabupaten/Kota</td>
-			<td colspan="11" class="kotak"><?= $input['kabpria']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['kabpria'];?></td>
 			<td colspan="5" class="left">d. Propinsi</td>
-			<td colspan="11" class="kotak"><?= $input['provinsipria']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['provinsipria'];?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -244,7 +234,7 @@
 			<td colspan="2" class="kotak padat tengah">7.</td>
 			<td colspan="9" class="kotak">Pendidikan Terakhir</td>
 			<td>&nbsp;&nbsp;</td>
-			<td class="kotak" colspan="34"><?= $input['pendidikan_pria'] ?></td>
+			<td class="kotak" colspan="34"><?= $input['pendidikan_pria']?></td>
 			<!-- <td>&nbsp;</td>
 			<td colspan="9" class="left">1. Tidak/Belum Sekolah</td>
 			<td colspan="9" class="left">2. Belum Tamat SD</td>
@@ -271,7 +261,7 @@
 			<td colspan="2" class="kotak padat tengah">8.</td>
 			<td colspan="12" class="kotak">Agama/Penghayat Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td class="kotak" colspan="31"><?= $input['agama_pria'] ?></td>
+			<td class="kotak"  colspan="31"><?= $input['agama_pria']?></td>
 			<!-- <td>&nbsp;</td>
 			<td colspan="8" class="left">1. Islam</td>
 			<td colspan="8" class="left">2. Kristen</td>
@@ -290,7 +280,7 @@
 			<td colspan="2" class="kotak padat tengah">9.</td>
 			<td colspan="15" class="kotak">Nama Organisasi Penghayat Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="28" class="kotak"><?= $input['penghayat_pria'] ?></td>
+			<td colspan="28" class="kotak"><?= $input['penghayat_pria']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -332,7 +322,7 @@
 			<td colspan="2" class="kotak padat tengah">12.</td>
 			<td colspan="12" class="kotak">Status Perkawinan Sebelum Nikah</td>
 			<td>&nbsp;&nbsp;</td>
-			<td class="kotak" colspan="31"><?= $input['status_kawin_pria'] ?></td>
+			<td class="kotak"  colspan="31"><?= $input['status_kawin_pria']?></td>
 			<!-- <td>&nbsp;</td>
 			<td colspan="8" class="left">1. Belum kawin</td>
 			<td colspan="8" class="left">2. Kawin</td>
@@ -377,7 +367,7 @@
 			<td colspan="2" class="kotak padat tengah">15.</td>
 			<td colspan="9" class="kotak">Kewarganegaraan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td class="kotak" colspan="34"><?= $input['wn_pria'] ?></td>
+			<td class="kotak" colspan="34"><?= $input['wn_pria']?></td>
 			<!-- <td>&nbsp;</td> -->
 			<!-- <td colspan="8" class="left">1. WNI</td>
 			<td colspan="8" class="left">2. WNA</td> -->
@@ -387,13 +377,11 @@
 			<td colspan="2" class="kotak padat tengah">16.</td>
 			<td colspan="9" class="kotak">Kebangsaan (bagi WNA)</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="34" class="kotak"><?= $input['bangsa_pria'] ?></td>
+			<td colspan="34" class="kotak"><?= $input['bangsa_pria']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
 		<tr>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="48">
@@ -405,11 +393,11 @@
 			<td colspan="2" class="kotak padat tengah">17.</td>
 			<td colspan="27" class="kotak">Nomor Induk Kependudukan (NIK)</td>
 			<td>&nbsp;&nbsp;</td>
-			<?php for ($i = 0; $i < 16; $i++) : ?>
+			<?php for ($i=0; $i<16; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['nik_ayah_pria'][$i])) : ?>
-						<?= $input['nik_ayah_pria'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['nik_ayah_pria'][$i])): ?>
+						<?= $input['nik_ayah_pria'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -420,7 +408,7 @@
 			<td colspan="2" class="kotak padat tengah">18.</td>
 			<td colspan="9" class="kotak">Nama Lengkap</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="34" class="kotak"><?= $input['nama_ayah_pria'] ?></td>
+			<td colspan="34" class="kotak"><?= $input['nama_ayah_pria']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -428,7 +416,7 @@
 			<td colspan="2" class="kotak padat tengah">19.</td>
 			<td colspan="12" class="kotak">Agama/Penghayat Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td class="kotak" colspan="31"><?= $input['agama_ayah_pria'] ?></td>
+			<td class="kotak" colspan="31"><?= $input['agama_ayah_pria']?></td>
 			<td>&nbsp;</td>
 			<!-- <td colspan="8" class="left">1. Islam</td>
 			<td colspan="8" class="left">2. Kristen</td>
@@ -447,7 +435,7 @@
 			<td colspan="2" class="kotak padat tengah">20.</td>
 			<td colspan="12" class="kotak">Nama Organisasi Penghayat Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="31" class="kotak"><?= $input['penghayat_ayah_pria'] ?></td>
+			<td colspan="31" class="kotak"><?= $input['penghayat_ayah_pria']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -455,7 +443,7 @@
 			<td colspan="2" class="kotak padat tengah">21.</td>
 			<td colspan="18" class="kotak">Tempat/Tanggal Lahir</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="9" class="kotak"><?= $input['tempat_lahir_ayah_pria'] ?></td>
+			<td colspan="9" class="kotak"><?= $input['tempat_lahir_ayah_pria']?></td>
 			<?php $tgl = date('dd', strtotime($input['tanggal_lahir_ayah_pria']));
 			$bln = date('mm', strtotime($input['tanggal_lahir_ayah_pria']));
 			$thn = date('Y', strtotime($input['tanggal_lahir_ayah_pria']));
@@ -499,23 +487,23 @@
 			<td colspan="2" class="kotak padat tengah">22.</td>
 			<td colspan="9" class="kotak">Alamat</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="22" class="kotak"><?= $input['alamat_ayah_pria'] ?></td>
+			<td colspan="22" class="kotak"><?= $input['alamat_ayah_pria']?></td>
 			<td colspan="3" class="tengah">RT</td>
-			<?php for ($i = 0; $i < 3; $i++) : ?>
+			<?php for ($i=0; $i<3; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['rt_ayah_pria'][$i])) : ?>
-						<?= $input['rt_ayah_pria'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['rt_ayah_pria'][$i])): ?>
+						<?= $input['rt_ayah_pria'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
 			<?php endfor; ?>
 			<td colspan="3" class="tengah">RW</td>
-			<?php for ($i = 0; $i < 3; $i++) : ?>
+			<?php for ($i=0; $i<3; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['rw_ayah_pria'][$i])) : ?>
-						<?= $input['rw_ayah_pria'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['rw_ayah_pria'][$i])): ?>
+						<?= $input['rw_ayah_pria'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -524,22 +512,22 @@
 		<tr>
 			<td colspan="13">&nbsp;</td>
 			<td colspan="7" class="left">Kode Pos</td>
-			<?php for ($i = 0; $i < 5; $i++) : ?>
+			<?php for ($i=0; $i<5; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($config['kode_pos'][$i])) : ?>
-						<?= $config['kode_pos'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($config['kode_pos'][$i])): ?>
+						<?= $config['kode_pos'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
 			<?php endfor; ?>
 			<td colspan="5">&nbsp;</td>
 			<td colspan="5" class="left">Telepon</td>
-			<?php for ($i = 0; $i < 12; $i++) : ?>
+			<?php for ($i=0; $i<12; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['telepon_ayah_pria'][$i])) : ?>
-						<?= $input['telepon_ayah_pria'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['telepon_ayah_pria'][$i])): ?>
+						<?= $input['telepon_ayah_pria'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -547,19 +535,19 @@
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="13">&nbsp;</td>
+			<td colspan="13" >&nbsp;</td>
 			<td colspan="7" class="left">a. Desa/Kelurahan</td>
-			<td colspan="11" class="kotak"><?= $input['desaayah_pria']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['desaayah_pria'];?></td>
 			<td colspan="5" class="left">b. Kecamatan</td>
-			<td colspan="11" class="kotak"><?= $input['kecayah_pria']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['kecayah_pria'];?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="13">&nbsp;</td>
+			<td colspan="13" >&nbsp;</td>
 			<td colspan="7" class="left">c. Kabupaten/Kota</td>
-			<td colspan="11" class="kotak"><?= $input['kabayah_pria']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['kabayah_pria'];?></td>
 			<td colspan="5" class="left">d. Propinsi</td>
-			<td colspan="11" class="kotak"><?= $input['provinsiayah_pria']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['provinsiayah_pria'];?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -580,9 +568,7 @@
 			<td colspan="33"> Lihat tata cara pengisian formulir X JENIS PEKERJAAN No. 1 s/d 88</td>
 		</tr>
 
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
 		<tr>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="48">
@@ -594,11 +580,11 @@
 			<td colspan="2" class="kotak padat tengah">24.</td>
 			<td colspan="27" class="kotak">24. Nomor Induk Kependudukan (NIK)</td>
 			<td>&nbsp;&nbsp;</td>
-			<?php for ($i = 0; $i < 16; $i++) : ?>
+			<?php for ($i=0; $i<16; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['nik_ibu_pria'][$i])) : ?>
-						<?= $input['nik_ibu_pria'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['nik_ibu_pria'][$i])): ?>
+						<?= $input['nik_ibu_pria'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -609,7 +595,7 @@
 			<td colspan="2" class="kotak padat tengah">25.</td>
 			<td colspan="9" class="kotak">Nama Lengkap</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="34" class="kotak"><?= $input['nama_ibu_pria'] ?></td>
+			<td colspan="34" class="kotak"><?= $input['nama_ibu_pria']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -617,7 +603,7 @@
 			<td colspan="2" class="kotak padat tengah">26.</td>
 			<td colspan="12" class="kotak">Agama/Penghayat Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td class="kotak" colspan="31"><?= $input['agama_ibu_pria'] ?></td>
+			<td class="kotak" colspan="31"><?= $input['agama_ibu_pria']?></td>
 			<td>&nbsp;</td>
 			<!-- <td colspan="8" class="left">1. Islam</td>
 			<td colspan="8" class="left">2. Kristen</td>
@@ -636,7 +622,7 @@
 			<td colspan="2" class="kotak padat tengah">27.</td>
 			<td colspan="12" class="kotak">Nama Organisasi Penghayat Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="31" class="kotak"><?= $input['penghayat_ibu_pria'] ?></td>
+			<td colspan="31" class="kotak"><?= $input['penghayat_ibu_pria']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -644,7 +630,7 @@
 			<td colspan="2" class="kotak padat tengah">28.</td>
 			<td colspan="18" class="kotak">Tempat/Tanggal Lahir</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="9" class="kotak"><?= $input['tempat_lahir_ibu_pria'] ?></td>
+			<td colspan="9" class="kotak"><?= $input['tempat_lahir_ibu_pria']?></td>
 			<?php $tgl = date('dd', strtotime($input['tanggal_lahir_ibu_pria']));
 			$bln = date('mm', strtotime($input['tanggal_lahir_ibu_pria']));
 			$thn = date('Y', strtotime($input['tanggal_lahir_ibu_pria']));
@@ -688,23 +674,23 @@
 			<td colspan="2" class="kotak padat tengah">29.</td>
 			<td colspan="9" class="kotak">Alamat</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="22" class="kotak"><?= $input['alamat_ibu_pria'] ?></td>
+			<td colspan="22" class="kotak"><?= $input['alamat_ibu_pria']?></td>
 			<td colspan="3" class="tengah">RT</td>
-			<?php for ($i = 0; $i < 3; $i++) : ?>
+			<?php for ($i=0; $i<3; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['rt_ibu_pria'][$i])) : ?>
-						<?= $input['rt_ibu_pria'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['rt_ibu_pria'][$i])): ?>
+						<?= $input['rt_ibu_pria'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
 			<?php endfor; ?>
 			<td colspan="3" class="tengah">RW</td>
-			<?php for ($i = 0; $i < 3; $i++) : ?>
+			<?php for ($i=0; $i<3; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['rw_ibu_pria'][$i])) : ?>
-						<?= $input['rw_ibu_pria'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['rw_ibu_pria'][$i])): ?>
+						<?= $input['rw_ibu_pria'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -713,22 +699,22 @@
 		<tr>
 			<td colspan="13">&nbsp;</td>
 			<td colspan="7" class="left">Kode Pos</td>
-			<?php for ($i = 0; $i < 5; $i++) : ?>
+			<?php for ($i=0; $i<5; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($config['kode_pos'][$i])) : ?>
-						<?= $config['kode_pos'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($config['kode_pos'][$i])): ?>
+						<?= $config['kode_pos'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
 			<?php endfor; ?>
 			<td colspan="5">&nbsp;</td>
 			<td colspan="5" class="left">Telepon</td>
-			<?php for ($i = 0; $i < 12; $i++) : ?>
+			<?php for ($i=0; $i<12; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['telepon_ibu_pria'][$i])) : ?>
-						<?= $input['telepon_ibu_pria'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['telepon_ibu_pria'][$i])): ?>
+						<?= $input['telepon_ibu_pria'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -736,19 +722,19 @@
 			<td colspan="5">&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="13">&nbsp;</td>
+			<td colspan="13" >&nbsp;</td>
 			<td colspan="7" class="left">a. Desa/Kelurahan</td>
-			<td colspan="11" class="kotak"><?= $input['desaibu_pria']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['desaibu_pria'];?></td>
 			<td colspan="5" class="left">b. Kecamatan</td>
-			<td colspan="11" class="kotak"><?= $input['kecibu_pria']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['kecibu_pria'];?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="13">&nbsp;</td>
+			<td colspan="13" >&nbsp;</td>
 			<td colspan="7" class="left">c. Kabupaten/Kota</td>
-			<td colspan="11" class="kotak"><?= $input['kabibu_pria']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['kabibu_pria'];?></td>
 			<td colspan="5" class="left">d. Propinsi</td>
-			<td colspan="11" class="kotak"><?= $input['provinsiibu_pria']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['provinsiibu_pria'];?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -768,9 +754,7 @@
 			<td>&nbsp;</td>
 			<td colspan="33"> Lihat tata cara pengisian formulir X JENIS PEKERJAAN No. 1 s/d 88</td>
 		</tr>
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
 		<tr>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="48">
@@ -782,11 +766,11 @@
 			<td colspan="2" class="kotak padat tengah">31.</td>
 			<td colspan="27" class="kotak">Nomor Induk Kependudukan (NIK)</td>
 			<td>&nbsp;&nbsp;</td>
-			<?php for ($i = 0; $i < 16; $i++) : ?>
+			<?php for ($i=0; $i<16; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['nik_wanita'][$i])) : ?>
-						<?= $input['nik_wanita'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['nik_wanita'][$i])): ?>
+						<?= $input['nik_wanita'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -797,11 +781,11 @@
 			<td colspan="2" class="kotak padat tengah">32.</td>
 			<td colspan="27" class="kotak">Nomor Kartu Keluarga (Nomor KK)</td>
 			<td>&nbsp;&nbsp;</td>
-			<?php for ($i = 0; $i < 16; $i++) : ?>
+			<?php for ($i=0; $i<16; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['kk_wanita'][$i])) : ?>
-						<?= $input['kk_wanita'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['kk_wanita'][$i])): ?>
+						<?= $input['kk_wanita'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -812,11 +796,11 @@
 			<td colspan="2" class="kotak padat tengah">33.</td>
 			<td colspan="27" class="kotak">Nomor Paspor</td>
 			<td>&nbsp;&nbsp;</td>
-			<?php for ($i = 0; $i < 16; $i++) : ?>
+			<?php for ($i=0; $i<16; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['dokumen_pasport_wanita'][$i])) : ?>
-						<?= $input['dokumen_pasport_wanita'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['dokumen_pasport_wanita'][$i])): ?>
+						<?= $input['dokumen_pasport_wanita'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -827,7 +811,7 @@
 			<td colspan="2" class="kotak padat tengah">34.</td>
 			<td colspan="9" class="kotak">Nama Lengkap</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="34" class="kotak"><?= $input['nama_wanita'] ?></td>
+			<td colspan="34" class="kotak"><?= $input['nama_wanita']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -835,7 +819,7 @@
 			<td colspan="2" class="kotak padat tengah">35.</td>
 			<td colspan="9" class="kotak">Tempat/Tanggal Lahir</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="18" class="kotak"><?= $input['tempat_lahir_wanita'] ?></td>
+			<td colspan="18" class="kotak"><?= $input['tempat_lahir_wanita']?></td>
 			<?php $tgl = date('dd', strtotime($input['tanggal_lahir_wanita']));
 			$bln = date('mm', strtotime($input['tanggal_lahir_wanita']));
 			$thn = date('Y', strtotime($input['tanggal_lahir_wanita']));
@@ -879,23 +863,23 @@
 			<td colspan="2" class="kotak padat tengah">36.</td>
 			<td colspan="9" class="kotak">Alamat</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="22" class="kotak"><?= $input['alamat_wanita'] ?></td>
+			<td colspan="22" class="kotak"><?= $input['alamat_wanita']?></td>
 			<td colspan="3" class="tengah">RT</td>
-			<?php for ($i = 0; $i < 3; $i++) : ?>
+			<?php for ($i=0; $i<3; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['rt_wanita'][$i])) : ?>
-						<?= $input['rt_wanita'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['rt_wanita'][$i])): ?>
+						<?= $input['rt_wanita'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
 			<?php endfor; ?>
 			<td colspan="3" class="tengah">RW</td>
-			<?php for ($i = 0; $i < 3; $i++) : ?>
+			<?php for ($i=0; $i<3; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['rw_wanita'][$i])) : ?>
-						<?= $input['rw_wanita'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['rw_wanita'][$i])): ?>
+						<?= $input['rw_wanita'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -904,22 +888,22 @@
 		<tr>
 			<td colspan="13">&nbsp;</td>
 			<td colspan="7" class="left">Kode Pos</td>
-			<?php for ($i = 0; $i < 5; $i++) : ?>
+			<?php for ($i=0; $i<5; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($config['kode_pos'][$i])) : ?>
-						<?= $config['kode_pos'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($config['kode_pos'][$i])): ?>
+						<?= $config['kode_pos'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
 			<?php endfor; ?>
 			<td colspan="5">&nbsp;</td>
 			<td colspan="5" class="left">Telepon</td>
-			<?php for ($i = 0; $i < 12; $i++) : ?>
+			<?php for ($i=0; $i<12; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['telepon_wanita'][$i])) : ?>
-						<?= $input['telepon_wanita'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['telepon_wanita'][$i])): ?>
+						<?= $input['telepon_wanita'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -927,19 +911,19 @@
 			<td colspan="5">&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="13">&nbsp;</td>
+			<td colspan="13" >&nbsp;</td>
 			<td colspan="7" class="left">a. Desa/Kelurahan</td>
-			<td colspan="11" class="kotak"><?= $input['desawanita']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['desawanita'];?></td>
 			<td colspan="5" class="left">b. Kecamatan</td>
-			<td colspan="11" class="kotak"><?= $input['kecwanita']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['kecwanita'];?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="13">&nbsp;</td>
+			<td colspan="13" >&nbsp;</td>
 			<td colspan="7" class="left">c. Kabupaten/Kota</td>
-			<td colspan="11" class="kotak"><?= $input['kabwanita']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['kabwanita'];?></td>
 			<td colspan="5" class="left">d. Propinsi</td>
-			<td colspan="11" class="kotak"><?= $input['provinsiwanita']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['provinsiwanita'];?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -947,7 +931,7 @@
 			<td colspan="2" class="kotak padat tengah">37.</td>
 			<td colspan="9" class="kotak">Pendidikan Terakhir</td>
 			<td>&nbsp;&nbsp;</td>
-			<td class="kotak" colspan="34"><?= $input['pendidikan_wanita'] ?></td>
+			<td class="kotak" colspan="34"><?= $input['pendidikan_wanita']?></td>
 			<td>&nbsp;</td>
 			<!-- <td colspan="9" class="left">1. Tidak/Belum Sekolah</td>
 			<td colspan="9" class="left">2. Belum Tamat SD</td>
@@ -974,7 +958,7 @@
 			<td colspan="2" class="kotak padat tengah">38.</td>
 			<td colspan="12" class="kotak">Agama/Penghayat Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td class="kotak" colspan="31"><?= $input['agama_wanita'] ?></td>
+			<td class="kotak" colspan="31"><?= $input['agama_wanita']?></td>
 			<td>&nbsp;</td><!-- 
 			<td colspan="8" class="left">1. Islam</td>
 			<td colspan="8" class="left">2. Kristen</td>
@@ -993,7 +977,7 @@
 			<td colspan="2" class="kotak padat tengah">39.</td>
 			<td colspan="16" class="kotak">Nama Organisasi Penghayat Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="27" class="kotak"><?= $input['penghayat_wanita'] ?></td>
+			<td colspan="27" class="kotak"><?= $input['penghayat_wanita']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -1035,7 +1019,7 @@
 			<td colspan="2" class="kotak padat tengah">42.</td>
 			<td colspan="12" class="kotak">Status Perkawinan Sebelum Nikah</td>
 			<td>&nbsp;&nbsp;</td>
-			<td class="kotak" colspan="31"><?= $input['status_kawin_wanita'] ?></td>
+			<td class="kotak" colspan="31"><?= $input['status_kawin_wanita']?></td>
 			<td>&nbsp;</td>
 			<!-- <td colspan="8" class="left">1. Belum kawin</td>
 			<td colspan="8" class="left">2. Kawin</td>
@@ -1064,7 +1048,7 @@
 			<td colspan="2" class="kotak padat tengah">44.</td>
 			<td colspan="9" class="kotak">Kewarganegaraan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td class="kotak" colspan="34"><?= $input['wn_wanita'] ?></td>
+			<td class="kotak" colspan="34"><?= $input['wn_wanita']?></td>
 			<td>&nbsp;</td>
 			<!-- <td colspan="8" class="left">1. WNI</td>
 			<td colspan="8" class="left">2. WNA</td> -->
@@ -1074,13 +1058,11 @@
 			<td colspan="2" class="kotak padat tengah">45.</td>
 			<td colspan="9" class="kotak">Kebangsaan (bagi WNA)</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="34" class="kotak"><?= $input['bangsa_wanita'] ?></td>
+			<td colspan="34" class="kotak"><?= $input['bangsa_wanita']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
 		<tr>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="48">
@@ -1092,11 +1074,11 @@
 			<td colspan="2" class="kotak padat tengah">46.</td>
 			<td colspan="27" class="kotak">Nomor Induk Kependudukan (NIK)</td>
 			<td>&nbsp;&nbsp;</td>
-			<?php for ($i = 0; $i < 16; $i++) : ?>
+			<?php for ($i=0; $i<16; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['nik_ayah_wanita'][$i])) : ?>
-						<?= $input['nik_ayah_wanita'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['nik_ayah_wanita'][$i])): ?>
+						<?= $input['nik_ayah_wanita'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -1107,7 +1089,7 @@
 			<td colspan="2" class="kotak padat tengah">47.</td>
 			<td colspan="9" class="kotak">Nama Lengkap</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="34" class="kotak"><?= $input['nama_ayah_wanita'] ?></td>
+			<td colspan="34" class="kotak"><?= $input['nama_ayah_wanita']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -1115,7 +1097,7 @@
 			<td colspan="2" class="kotak padat tengah">48.</td>
 			<td colspan="12" class="kotak">Agama/Penghayat Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td class="kotak" colspan="31"><?= $input['agama_ayah_wanita'] ?></td>
+			<td class="kotak" colspan="31"><?= $input['agama_ayah_wanita']?></td>
 			<td>&nbsp;</td>
 			<!-- <td colspan="8" class="left">1. Islam</td>
 			<td colspan="8" class="left">2. Kristen</td>
@@ -1134,7 +1116,7 @@
 			<td colspan="2" class="kotak padat tengah">49.</td>
 			<td colspan="12" class="kotak">Nama Organisasi Penghayat Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="31" class="kotak"><?= $input['penghayat_ayah_wanita'] ?></td>
+			<td colspan="31" class="kotak"><?= $input['penghayat_ayah_wanita']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -1142,7 +1124,7 @@
 			<td colspan="2" class="kotak padat tengah">50.</td>
 			<td colspan="18" class="kotak">Tempat/Tanggal Lahir</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="9" class="kotak"><?= $input['tempat_lahir_ayah_wanita'] ?></td>
+			<td colspan="9" class="kotak"><?= $input['tempat_lahir_ayah_wanita']?></td>
 			<?php $tgl = date('dd', strtotime($input['tanggal_lahir_ayah_wanita']));
 			$bln = date('mm', strtotime($input['tanggal_lahir_ayah_wanita']));
 			$thn = date('Y', strtotime($input['tanggal_lahir_ayah_wanita']));
@@ -1186,23 +1168,23 @@
 			<td colspan="2" class="kotak padat tengah">51.</td>
 			<td colspan="9" class="kotak">Alamat</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="22" class="kotak"><?= $input['alamat_ayah_wanita'] ?></td>
+			<td colspan="22" class="kotak"><?= $input['alamat_ayah_wanita']?></td>
 			<td colspan="3" class="tengah">RT</td>
-			<?php for ($i = 0; $i < 3; $i++) : ?>
+			<?php for ($i=0; $i<3; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['rt_ayah_wanita'][$i])) : ?>
-						<?= $input['rt_ayah_wanita'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['rt_ayah_wanita'][$i])): ?>
+						<?= $input['rt_ayah_wanita'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
 			<?php endfor; ?>
 			<td colspan="3" class="tengah">RW</td>
-			<?php for ($i = 0; $i < 3; $i++) : ?>
+			<?php for ($i=0; $i<3; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['rw_ayah_wanita'][$i])) : ?>
-						<?= $input['rw_ayah_wanita'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['rw_ayah_wanita'][$i])): ?>
+						<?= $input['rw_ayah_wanita'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -1211,22 +1193,22 @@
 		<tr>
 			<td colspan="13">&nbsp;</td>
 			<td colspan="7" class="left">Kode Pos</td>
-			<?php for ($i = 0; $i < 5; $i++) : ?>
+			<?php for ($i=0; $i<5; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($config['kode_pos'][$i])) : ?>
-						<?= $config['kode_pos'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($config['kode_pos'][$i])): ?>
+						<?= $config['kode_pos'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
 			<?php endfor; ?>
 			<td colspan="5">&nbsp;</td>
 			<td colspan="5" class="left">Telepon</td>
-			<?php for ($i = 0; $i < 12; $i++) : ?>
+			<?php for ($i=0; $i<12; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['telepon_ayah_wanita'][$i])) : ?>
-						<?= $input['telepon_ayah_wanita'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['telepon_ayah_wanita'][$i])): ?>
+						<?= $input['telepon_ayah_wanita'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -1234,19 +1216,19 @@
 			<td colspan="5">&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="13">&nbsp;</td>
+			<td colspan="13" >&nbsp;</td>
 			<td colspan="7" class="left">a. Desa/Kelurahan</td>
-			<td colspan="11" class="kotak"><?= $input['desaayah_wanita']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['desaayah_wanita'];?></td>
 			<td colspan="5" class="left">b. Kecamatan</td>
-			<td colspan="11" class="kotak"><?= $input['kecayah_wanita']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['kecayah_wanita'];?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="13">&nbsp;</td>
+			<td colspan="13" >&nbsp;</td>
 			<td colspan="7" class="left">c. Kabupaten/Kota</td>
-			<td colspan="11" class="kotak"><?= $input['kabayah_wanita']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['kabayah_wanita'];?></td>
 			<td colspan="5" class="left">d. Propinsi</td>
-			<td colspan="11" class="kotak"><?= $input['provinsiayah_wanita']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['provinsiayah_wanita'];?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -1267,9 +1249,7 @@
 			<td colspan="33"> Lihat tata cara pengisian formulir X JENIS PEKERJAAN No. 1 s/d 88</td>
 		</tr>
 
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
 		<tr>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="48">
@@ -1281,11 +1261,11 @@
 			<td colspan="2" class="kotak padat tengah">53.</td>
 			<td colspan="27" class="kotak">Nomor Induk Kependudukan (NIK)</td>
 			<td>&nbsp;&nbsp;</td>
-			<?php for ($i = 0; $i < 16; $i++) : ?>
+			<?php for ($i=0; $i<16; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['nik_ibu_wanita'][$i])) : ?>
-						<?= $input['nik_ibu_wanita'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['nik_ibu_wanita'][$i])): ?>
+						<?= $input['nik_ibu_wanita'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -1296,7 +1276,7 @@
 			<td colspan="2" class="kotak padat tengah">54.</td>
 			<td colspan="9" class="kotak">Nama Lengkap</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="34" class="kotak"><?= $input['nama_ibu_wanita'] ?></td>
+			<td colspan="34" class="kotak"><?= $input['nama_ibu_wanita']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -1304,7 +1284,7 @@
 			<td colspan="2" class="kotak padat tengah">55.</td>
 			<td colspan="12" class="kotak">Agama/Penghayat Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td class="kotak" colspan="31"><?= $input['agama_ibu_wanita'] ?></td>
+			<td class="kotak" colspan="31"><?= $input['agama_ibu_wanita']?></td>
 			<td>&nbsp;</td>
 			<!-- <td colspan="8" class="left">1. Islam</td>
 			<td colspan="8" class="left">2. Kristen</td>
@@ -1323,7 +1303,7 @@
 			<td colspan="2" class="kotak padat tengah">56.</td>
 			<td colspan="12" class="kotak">Nama Organisasi Penghayat Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="31" class="kotak"><?= $input['penghayat_ibu_wanita'] ?></td>
+			<td colspan="31" class="kotak"><?= $input['penghayat_ibu_wanita']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -1331,7 +1311,7 @@
 			<td colspan="2" class="kotak padat tengah">57.</td>
 			<td colspan="18" class="kotak">Tempat/Tanggal Lahir</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="9" class="kotak"><?= $input['tempat_lahir_ibu_wanita'] ?></td>
+			<td colspan="9" class="kotak"><?= $input['tempat_lahir_ibu_wanita']?></td>
 			<?php $tgl = date('dd', strtotime($input['tanggal_lahir_ibu_wanita']));
 			$bln = date('mm', strtotime($input['tanggal_lahir_ibu_wanita']));
 			$thn = date('Y', strtotime($input['tanggal_lahir_ibu_wanita']));
@@ -1375,23 +1355,23 @@
 			<td colspan="2" class="kotak padat tengah">58.</td>
 			<td colspan="9" class="kotak">Alamat</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="22" class="kotak"><?= $input['alamat_ibu_wanita'] ?></td>
+			<td colspan="22" class="kotak"><?= $input['alamat_ibu_wanita']?></td>
 			<td colspan="3" class="tengah">RT</td>
-			<?php for ($i = 0; $i < 3; $i++) : ?>
+			<?php for ($i=0; $i<3; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['rt_ibu_wanita'][$i])) : ?>
-						<?= $input['rt_ibu_wanita'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['rt_ibu_wanita'][$i])): ?>
+						<?= $input['rt_ibu_wanita'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
 			<?php endfor; ?>
 			<td colspan="3" class="tengah">RW</td>
-			<?php for ($i = 0; $i < 3; $i++) : ?>
+			<?php for ($i=0; $i<3; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['rw_ibu_wanita'][$i])) : ?>
-						<?= $input['rw_ibu_wanita'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['rw_ibu_wanita'][$i])): ?>
+						<?= $input['rw_ibu_wanita'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -1400,22 +1380,22 @@
 		<tr>
 			<td colspan="13">&nbsp;</td>
 			<td colspan="7" class="left">Kode Pos</td>
-			<?php for ($i = 0; $i < 5; $i++) : ?>
+			<?php for ($i=0; $i<5; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($config['kode_pos'][$i])) : ?>
-						<?= $config['kode_pos'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($config['kode_pos'][$i])): ?>
+						<?= $config['kode_pos'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
 			<?php endfor; ?>
 			<td colspan="5">&nbsp;</td>
 			<td colspan="5" class="left">Telepon</td>
-			<?php for ($i = 0; $i < 12; $i++) : ?>
+			<?php for ($i=0; $i<12; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['telepon_ibu_wanita'][$i])) : ?>
-						<?= $input['telepon_ibu_wanita'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['telepon_ibu_wanita'][$i])): ?>
+						<?= $input['telepon_ibu_wanita'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -1423,19 +1403,19 @@
 			<td colspan="5">&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="13">&nbsp;</td>
+			<td colspan="13" >&nbsp;</td>
 			<td colspan="7" class="left">a. Desa/Kelurahan</td>
-			<td colspan="11" class="kotak"><?= $input['desaibu_wanita']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['desaibu_wanita'];?></td>
 			<td colspan="5" class="left">b. Kecamatan</td>
-			<td colspan="11" class="kotak"><?= $input['kecibu_wanita']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['kecibu_wanita'];?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="13">&nbsp;</td>
+			<td colspan="13" >&nbsp;</td>
 			<td colspan="7" class="left">c. Kabupaten/Kota</td>
-			<td colspan="11" class="kotak"><?= $input['kabibu_wanita']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['kabibu_wanita'];?></td>
 			<td colspan="5" class="left">d. Propinsi</td>
-			<td colspan="11" class="kotak"><?= $input['provinsiibu_wanita']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['provinsiibu_wanita'];?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -1455,10 +1435,8 @@
 			<td>&nbsp;</td>
 			<td colspan="33"> Lihat tata cara pengisian formulir X JENIS PEKERJAAN No. 1 s/d 88</td>
 		</tr>
-
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
+		
+		<tr><td colspan="48">&nbsp;</td></tr>
 		<tr>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="48">
@@ -1466,9 +1444,7 @@
 			</td>
 		</tr>
 
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
 		<tr>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="48">
@@ -1480,11 +1456,11 @@
 			<td colspan="2" class="kotak padat tengah">60.</td>
 			<td colspan="27" class="kotak">Nomor Induk Kependudukan (NIK)</td>
 			<td>&nbsp;&nbsp;</td>
-			<?php for ($i = 0; $i < 16; $i++) : ?>
+			<?php for ($i=0; $i<16; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['nik_saksi1'][$i])) : ?>
-						<?= $input['nik_saksi1'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['nik_saksi1'][$i])): ?>
+						<?= $input['nik_saksi1'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -1495,7 +1471,7 @@
 			<td colspan="2" class="kotak padat tengah">61.</td>
 			<td colspan="9" class="kotak">Nama Lengkap</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="34" class="kotak"><?= $input['nama_saksi1'] ?></td>
+			<td colspan="34" class="kotak"><?= $input['nama_saksi1']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -1503,7 +1479,7 @@
 			<td colspan="2" class="kotak padat tengah">62.</td>
 			<td colspan="18" class="kotak">Tempat/Tanggal Lahir</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="9" class="kotak"><?= $input['tempat_lahir_saksi1'] ?></td>
+			<td colspan="9" class="kotak"><?= $input['tempat_lahir_saksi1']?></td>
 			<?php $tgl = date('dd', strtotime($input['tanggal_lahir_saksi1']));
 			$bln = date('mm', strtotime($input['tanggal_lahir_saksi1']));
 			$thn = date('Y', strtotime($input['tanggal_lahir_saksi1']));
@@ -1547,7 +1523,7 @@
 			<td colspan="2" class="kotak padat tengah">63.</td>
 			<td colspan="12" class="kotak">Agama/Penghayat Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td class="kotak" colspan="31"><?= $input['agama_saksi1'] ?></td>
+			<td class="kotak" colspan="31"><?= $input['agama_saksi1']?></td>
 			<td>&nbsp;</td>
 			<!-- <td colspan="8" class="left">1. Islam</td>
 			<td colspan="8" class="left">2. Kristen</td>
@@ -1566,7 +1542,7 @@
 			<td colspan="2" class="kotak padat tengah">64.</td>
 			<td colspan="12" class="kotak">Nama Organisasi Penghayat Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="31" class="kotak"><?= $input['penghayat_saksi1'] ?></td>
+			<td colspan="31" class="kotak"><?= $input['penghayat_saksi1']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -1574,23 +1550,23 @@
 			<td colspan="2" class="kotak padat tengah">65.</td>
 			<td colspan="9" class="kotak">Alamat</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="22" class="kotak"><?= $input['alamat_saksi1'] ?></td>
+			<td colspan="22" class="kotak"><?= $input['alamat_saksi1']?></td>
 			<td colspan="3" class="tengah">RT</td>
-			<?php for ($i = 0; $i < 3; $i++) : ?>
+			<?php for ($i=0; $i<3; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['rt_saksi1'][$i])) : ?>
-						<?= $input['rt_saksi1'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['rt_saksi1'][$i])): ?>
+						<?= $input['rt_saksi1'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
 			<?php endfor; ?>
 			<td colspan="3" class="tengah">RW</td>
-			<?php for ($i = 0; $i < 3; $i++) : ?>
+			<?php for ($i=0; $i<3; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['rw_saksi1'][$i])) : ?>
-						<?= $input['rw_saksi1'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['rw_saksi1'][$i])): ?>
+						<?= $input['rw_saksi1'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -1599,22 +1575,22 @@
 		<tr>
 			<td colspan="13">&nbsp;</td>
 			<td colspan="7" class="left">Kode Pos</td>
-			<?php for ($i = 0; $i < 5; $i++) : ?>
+			<?php for ($i=0; $i<5; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($config['kode_pos'][$i])) : ?>
-						<?= $config['kode_pos'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($config['kode_pos'][$i])): ?>
+						<?= $config['kode_pos'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
 			<?php endfor; ?>
 			<td colspan="5">&nbsp;</td>
 			<td colspan="5" class="left">Telepon</td>
-			<?php for ($i = 0; $i < 12; $i++) : ?>
+			<?php for ($i=0; $i<12; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['telepon_saksi1'][$i])) : ?>
-						<?= $input['telepon_saksi1'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['telepon_saksi1'][$i])): ?>
+						<?= $input['telepon_saksi1'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -1622,19 +1598,19 @@
 			<td colspan="5">&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="13">&nbsp;</td>
+			<td colspan="13" >&nbsp;</td>
 			<td colspan="7" class="left">a. Desa/Kelurahan</td>
-			<td colspan="11" class="kotak"><?= $input['desasaksi1']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['desasaksi1'];?></td>
 			<td colspan="5" class="left">b. Kecamatan</td>
-			<td colspan="11" class="kotak"><?= $input['kecsaksi1']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['kecsaksi1'];?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="13">&nbsp;</td>
+			<td colspan="13" >&nbsp;</td>
 			<td colspan="7" class="left">c. Kabupaten/Kota</td>
-			<td colspan="11" class="kotak"><?= $input['kabsaksi1']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['kabsaksi1'];?></td>
 			<td colspan="5" class="left">d. Propinsi</td>
-			<td colspan="11" class="kotak"><?= $input['provinsisaksi1']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['provinsisaksi1'];?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -1642,7 +1618,7 @@
 			<td colspan="2" class="kotak padat tengah">66.</td>
 			<td colspan="9" class="kotak">Pekerjaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td class="kotak" colspan="34"><?= $input['pekerjaanid_saksi1'] ?></td>
+			<td class="kotak" colspan="34"><?= $input['pekerjaanid_saksi1']?></td>
 			<td>&nbsp;</td>
 			<!-- <?php for ($j = 0; $j < 2; $j++) : ?>
 				<td class="kotak tengah">
@@ -1657,9 +1633,7 @@
 			<td colspan="33"> Lihat tata cara pengisian formulir X JENIS PEKERJAAN No. 1 s/d 88</td> -->
 		</tr>
 
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
 		<tr>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="48">
@@ -1671,11 +1645,11 @@
 			<td colspan="2" class="kotak padat tengah">67.</td>
 			<td colspan="27" class="kotak">Nomor Induk Kependudukan (NIK)</td>
 			<td>&nbsp;&nbsp;</td>
-			<?php for ($i = 0; $i < 16; $i++) : ?>
+			<?php for ($i=0; $i<16; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['nik_saksi2'][$i])) : ?>
-						<?= $input['nik_saksi2'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['nik_saksi2'][$i])): ?>
+						<?= $input['nik_saksi2'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -1686,7 +1660,7 @@
 			<td colspan="2" class="kotak padat tengah">68.</td>
 			<td colspan="9" class="kotak">Nama Lengkap</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="34" class="kotak"><?= $input['nama_saksi2'] ?></td>
+			<td colspan="34" class="kotak"><?= $input['nama_saksi2']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -1694,7 +1668,7 @@
 			<td colspan="2" class="kotak padat tengah">69.</td>
 			<td colspan="18" class="kotak">Tempat/Tanggal Lahir</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="9" class="kotak"><?= $input['tempat_lahir_saksi2'] ?></td>
+			<td colspan="9" class="kotak"><?= $input['tempat_lahir_saksi2']?></td>
 			<?php $tgl = date('dd', strtotime($input['tanggal_lahir_saksi2']));
 			$bln = date('mm', strtotime($input['tanggal_lahir_saksi2']));
 			$thn = date('Y', strtotime($input['tanggal_lahir_saksi2']));
@@ -1738,7 +1712,7 @@
 			<td colspan="2" class="kotak padat tengah">70.</td>
 			<td colspan="12" class="kotak">Agama/Penghayat Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td class="kotak" colspan="31"><?= $input['agama_saksi2'] ?></td>
+			<td class="kotak" colspan="31"><?= $input['agama_saksi2']?></td>
 			<td>&nbsp;</td>
 		</tr>
 		<tr>
@@ -1746,7 +1720,7 @@
 			<td colspan="2" class="kotak padat tengah">71.</td>
 			<td colspan="12" class="kotak">Nama Organisasi Penghayat Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="31" class="kotak"><?= $input['penghayat_saksi2'] ?></td>
+			<td colspan="31" class="kotak"><?= $input['penghayat_saksi2']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -1754,23 +1728,23 @@
 			<td colspan="2" class="kotak padat tengah">72.</td>
 			<td colspan="9" class="kotak">Alamat</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="22" class="kotak"><?= $input['alamat_saksi2'] ?></td>
+			<td colspan="22" class="kotak"><?= $input['alamat_saksi2']?></td>
 			<td colspan="3" class="tengah">RT</td>
-			<?php for ($i = 0; $i < 3; $i++) : ?>
+			<?php for ($i=0; $i<3; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['rt_saksi2'][$i])) : ?>
-						<?= $input['rt_saksi2'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['rt_saksi2'][$i])): ?>
+						<?= $input['rt_saksi2'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
 			<?php endfor; ?>
 			<td colspan="3" class="tengah">RW</td>
-			<?php for ($i = 0; $i < 3; $i++) : ?>
+			<?php for ($i=0; $i<3; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['rw_saksi2'][$i])) : ?>
-						<?= $input['rw_saksi2'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['rw_saksi2'][$i])): ?>
+						<?= $input['rw_saksi2'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -1779,22 +1753,22 @@
 		<tr>
 			<td colspan="13">&nbsp;</td>
 			<td colspan="7" class="left">Kode Pos</td>
-			<?php for ($i = 0; $i < 5; $i++) : ?>
+			<?php for ($i=0; $i<5; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($config['kode_pos'][$i])) : ?>
-						<?= $config['kode_pos'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($config['kode_pos'][$i])): ?>
+						<?= $config['kode_pos'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
 			<?php endfor; ?>
 			<td colspan="5">&nbsp;</td>
 			<td colspan="5" class="left">Telepon</td>
-			<?php for ($i = 0; $i < 12; $i++) : ?>
+			<?php for ($i=0; $i<12; $i++): ?>
 				<td class="kotak padat tengah">
-					<?php if (isset($input['telepon_saksi2'][$i])) : ?>
-						<?= $input['telepon_saksi2'][$i]; ?>
-					<?php else : ?>
+					<?php if (isset($input['telepon_saksi2'][$i])): ?>
+						<?= $input['telepon_saksi2'][$i];?>
+					<?php else: ?>
 						&nbsp;
 					<?php endif; ?>
 				</td>
@@ -1802,19 +1776,19 @@
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="13">&nbsp;</td>
+			<td colspan="13" >&nbsp;</td>
 			<td colspan="7" class="left">a. Desa/Kelurahan</td>
-			<td colspan="11" class="kotak"><?= $input['desasaksi2']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['desasaksi2'];?></td>
 			<td colspan="5" class="left">b. Kecamatan</td>
-			<td colspan="11" class="kotak"><?= $input['kecsaksi2']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['kecsaksi2'];?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="13">&nbsp;</td>
+			<td colspan="13" >&nbsp;</td>
 			<td colspan="7" class="left">c. Kabupaten/Kota</td>
-			<td colspan="11" class="kotak"><?= $input['kabsaksi2']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['kabsaksi2'];?></td>
 			<td colspan="5" class="left">d. Propinsi</td>
-			<td colspan="11" class="kotak"><?= $input['provinsisaksi2']; ?></td>
+			<td colspan="11" class="kotak"><?= $input['provinsisaksi2'];?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -1822,7 +1796,7 @@
 			<td colspan="2" class="kotak padat tengah">73.</td>
 			<td colspan="9" class="kotak">Pekerjaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td class="kotak" colspan="34"><?= $input['pekerjaanid_saksi2'] ?></td>
+			<td class="kotak" colspan="34"><?= $input['pekerjaanid_saksi2']?></td>
 			<td>&nbsp;</td>
 			<!-- <?php for ($j = 0; $j < 2; $j++) : ?>
 				<td class="kotak tengah">
@@ -1837,9 +1811,7 @@
 			<td colspan="33"> Lihat tata cara pengisian formulir X JENIS PEKERJAAN No. 1 s/d 88</td> -->
 		</tr>
 
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
 		<tr>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="48">
@@ -1894,7 +1866,7 @@
 			<td colspan="2" class="kotak padat tengah">75.</td>
 			<td colspan="12" class="kotak">Hari, Tanggal, Bulan dan Tahun Melapor</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="9" class="kotak"><?= $input['hari_lapor'] ?></td>
+			<td colspan="9" class="kotak"><?= $input['hari_lapor']?></td>
 			<?php $tgl = date('dd', strtotime($input['tanggal_lapor']));
 			$bln = date('mm', strtotime($input['tanggal_lapor']));
 			$thn = date('Y', strtotime($input['tanggal_lapor']));
@@ -1938,7 +1910,7 @@
 			<td colspan="2" class="kotak padat tengah">76.</td>
 			<td colspan="9" class="kotak">Pukul</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="9" class="kotak"><?= $input['jam_lapor'] ?></td>
+			<td colspan="9" class="kotak"><?= $input['jam_lapor']?></td>
 			<td>&nbsp;</td>
 			<td colspan="13">&nbsp;</td>
 		</tr>
@@ -1947,7 +1919,7 @@
 			<td colspan="2" class="kotak padat tengah">77.</td>
 			<td colspan="12" class="kotak">Agama/Penghayat Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td class="kotak" colspan="32"><?= $input['agama_kawin'] ?></td>
+			<td class="kotak" colspan="32"><?= $input['agama_kawin']?></td>
 			<td>&nbsp;</td>
 			<!-- <td colspan="8" class="left">1. Islam</td>
 			<td colspan="8" class="left">2. Kristen</td>
@@ -1966,7 +1938,7 @@
 			<td colspan="2" class="kotak padat tengah">78.</td>
 			<td colspan="15" class="kotak">Nama Organisasi Penghayat Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="28" class="kotak"><?= $input['penghayat_kawin'] ?></td>
+			<td colspan="28" class="kotak"><?= $input['penghayat_kawin']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -1974,7 +1946,7 @@
 			<td colspan="2" class="kotak padat tengah">79.</td>
 			<td colspan="12" class="kotak">Nama Badan Peradilan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="31" class="kotak"><?= $input['badan_peradilan'] ?></td>
+			<td colspan="31" class="kotak"><?= $input['badan_peradilan']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -1982,7 +1954,7 @@
 			<td colspan="2" class="kotak padat tengah">80.</td>
 			<td colspan="12" class="kotak">Nomor Putusan Penetapan Pengadilan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="31" class="kotak"><?= $input['nomor_putusan'] ?></td>
+			<td colspan="31" class="kotak"><?= $input['nomor_putusan']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -2033,7 +2005,7 @@
 			<td colspan="2" class="kotak padat tengah">82.</td>
 			<td colspan="12" class="kotak">Nama Pemuka Agama/Pghyt Kepercayaan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="31" class="kotak"><?= $input['nama_pemuka'] ?></td>
+			<td colspan="31" class="kotak"><?= $input['nama_pemuka']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -2041,7 +2013,7 @@
 			<td colspan="2" class="kotak padat tengah">83.</td>
 			<td colspan="12" class="kotak">Ijin Perwakilan bagi WNA / Nomor</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="31" class="kotak"><?= $input['ijin_wna'] ?></td>
+			<td colspan="31" class="kotak"><?= $input['ijin_wna']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -2049,7 +2021,7 @@
 			<td colspan="2" class="kotak padat tengah">84.</td>
 			<td colspan="12" class="kotak">Jumlah Anak Yang Telah Diakui dan Disahkan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="31" class="kotak"><?= $input['jumlah_anak'] ?></td>
+			<td colspan="31" class="kotak"><?= $input['jumlah_anak']?></td>
 			<td>&nbsp;</td>
 		</tr>
 
@@ -2059,42 +2031,42 @@
 			<td colspan="6" class="kotak">Nama Anak</td>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="2" class="tengah">1.</td>
-			<td colspan="35" class="kotak"><?= $input['nama_anak1'] ?></td>
+			<td colspan="35" class="kotak"><?= $input['nama_anak1']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
 			<td colspan="9"></td>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="2" class="tengah">2.</td>
-			<td colspan="35" class="kotak"><?= $input['nama_anak2'] ?></td>
+			<td colspan="35" class="kotak"><?= $input['nama_anak2']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
 			<td colspan="9"></td>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="2" class="tengah">3.</td>
-			<td colspan="35" class="kotak"><?= $input['nama_anak3'] ?></td>
+			<td colspan="35" class="kotak"><?= $input['nama_anak3']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
 			<td colspan="9"></td>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="2" class="tengah">4.</td>
-			<td colspan="35" class="kotak"><?= $input['nama_anak4'] ?></td>
+			<td colspan="35" class="kotak"><?= $input['nama_anak4']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
 			<td colspan="9"></td>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="2" class="tengah">5.</td>
-			<td colspan="35" class="kotak"><?= $input['nama_anak5'] ?></td>
+			<td colspan="35" class="kotak"><?= $input['nama_anak5']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
 			<td colspan="9"></td>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="2" class="tengah">6.</td>
-			<td colspan="35" class="kotak"><?= $input['nama_anak6'] ?></td>
+			<td colspan="35" class="kotak"><?= $input['nama_anak6']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 
@@ -2104,48 +2076,46 @@
 			<td colspan="9" class="kotak">No, Tgl. Akta Kelahiran</td>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="2" class="tengah">1. No.</td>
-			<td colspan="15" class="kotak"><?= $input['no_akta_anak1'] ?></td>
+			<td colspan="15" class="kotak"><?= $input['no_akta_anak1']?></td>
 			<td colspan="2" class="tengah">Tgl.</td>
-			<td colspan="15" class="kotak"><?= $input['tgl_akta_anak1'] ?></td>
+			<td colspan="15" class="kotak"><?= $input['tgl_akta_anak1']?></td>
 		</tr>
 		<tr>
 			<td colspan="13"></td>
 			<td colspan="2" class="tengah">2. No.</td>
-			<td colspan="15" class="kotak"><?= $input['no_akta_anak2'] ?></td>
+			<td colspan="15" class="kotak"><?= $input['no_akta_anak2']?></td>
 			<td colspan="2" class="tengah">Tgl.</td>
-			<td colspan="15" class="kotak"><?= $input['tgl_akta_anak2'] ?></td>
+			<td colspan="15" class="kotak"><?= $input['tgl_akta_anak2']?></td>
 		</tr>
 		<tr>
 			<td colspan="13"></td>
 			<td colspan="2" class="tengah">3. No.</td>
-			<td colspan="15" class="kotak"><?= $input['no_akta_anak3'] ?></td>
+			<td colspan="15" class="kotak"><?= $input['no_akta_anak3']?></td>
 			<td colspan="2" class="tengah">Tgl.</td>
-			<td colspan="15" class="kotak"><?= $input['tgl_akta_anak3'] ?></td>
+			<td colspan="15" class="kotak"><?= $input['tgl_akta_anak3']?></td>
 		</tr>
 		<tr>
 			<td colspan="13"></td>
 			<td colspan="2" class="tengah">4. No.</td>
-			<td colspan="15" class="kotak"><?= $input['no_akta_anak4'] ?></td>
+			<td colspan="15" class="kotak"><?= $input['no_akta_anak4']?></td>
 			<td colspan="2" class="tengah">Tgl.</td>
-			<td colspan="15" class="kotak"><?= $input['tgl_akta_anak4'] ?></td>
+			<td colspan="15" class="kotak"><?= $input['tgl_akta_anak4']?></td>
 		</tr>
 		<tr>
 			<td colspan="13"></td>
 			<td colspan="2" class="tengah">5. No.</td>
-			<td colspan="15" class="kotak"><?= $input['no_akta_anak5'] ?></td>
+			<td colspan="15" class="kotak"><?= $input['no_akta_anak5']?></td>
 			<td colspan="2" class="tengah">Tgl.</td>
-			<td colspan="15" class="kotak"><?= $input['tgl_akta_anak5'] ?></td>
+			<td colspan="15" class="kotak"><?= $input['tgl_akta_anak5']?></td>
 		</tr>
 		<tr>
 			<td colspan="13"></td>
 			<td colspan="2" class="tengah">6. No.</td>
-			<td colspan="15" class="kotak"><?= $input['no_akta_anak6'] ?></td>
+			<td colspan="15" class="kotak"><?= $input['no_akta_anak6']?></td>
 			<td colspan="2" class="tengah">Tgl.</td>
-			<td colspan="15" class="kotak"><?= $input['tgl_akta_anak6'] ?></td>
+			<td colspan="15" class="kotak"><?= $input['tgl_akta_anak6']?></td>
 		</tr>
-		<tr>
-			<td colspan="48" class="">&nbsp;</td>
-		</tr>
+		<tr><td colspan="48" class="">&nbsp;</td></tr>
 		<tr>
 			<td>&nbsp;&nbsp;</td>
 			<td colspan="9" class="kotak"><strong>DATA ADMINISTRASI</strong></td>
@@ -2250,7 +2220,7 @@
 			<td colspan="2" class="kotak padat tengah">88.</td>
 			<td colspan="12" class="kotak">Nomor Akta Perkawinan</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="31" class="kotak"><?= $individu['alamat'] ?></td>
+			<td colspan="31" class="kotak"><?= $individu['alamat']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -2261,7 +2231,7 @@
 			<td colspan="2" class="tengah">Tgl</td>
 			<?php for ($j = 0; $j < 2; $j++) : ?>
 				<td class="kotak tengah">
-					&nbsp;
+						&nbsp;
 				</td>
 			<?php endfor; ?>
 			<td>&nbsp;</td>
@@ -2312,7 +2282,7 @@
 			<td colspan="2" class="kotak padat tengah">91.</td>
 			<td colspan="12" class="kotak">Nama Petugas Entri Data</td>
 			<td>&nbsp;&nbsp;</td>
-			<td colspan="31" class="kotak"><?= $individu['alamat'] ?></td>
+			<td colspan="31" class="kotak"><?= $individu['alamat']?></td>
 			<td>&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
@@ -2344,18 +2314,14 @@
 		</tr>
 
 
-		<tr>
-			<td colspan="46" class="">&nbsp;</td>
-		</tr>
+		<tr><td colspan="46" class="">&nbsp;</td></tr>
 
 		<tr>
 			<td colspan="46" style="text-align: right">
-				<?= str_pad(".", 40, ".", STR_PAD_LEFT); ?>, <?= str_pad(".", 60, ".", STR_PAD_LEFT); ?>
+				<?= str_pad(".",40,".",STR_PAD_LEFT);?>, <?= str_pad(".", 60, ".", STR_PAD_LEFT);?>
 			</td>
 		</tr>
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
 		<tr>
 			<td colspan="4">&nbsp;</td>
 			<td colspan="16" style="text-align: center;">Mengetahui</td>
@@ -2363,74 +2329,48 @@
 			<td colspan="12" style="text-align: center;">Pelapor</td>
 			<td>&nbsp;</td>
 		</tr>
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
 		<tr>
 			<td>&nbsp;</td>
-			<td colspan="11" style="text-align: center;"><?= $penandatangan['atas_nama'] ?></td>
+			<td colspan="11" style="text-align: center;"><?= $penandatangan['atas_nama']?></td>
 			<td>&nbsp;</td>
 			<td colspan="13" style="text-align: center;">Petugas Pencatat</td>
 			<td colspan="22">&nbsp;</td>
 		</tr>
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
 		<tr>
 			<td>&nbsp;</td>
-			<td colspan="11" style="text-align: center;"><strong>(<?= padded_string_center(strtoupper($penandatangan['nama']), 30) ?>)</strong></td>
+			<td colspan="11" style="text-align: center;"><strong>(<?= padded_string_center(strtoupper($penandatangan['nama']), 30)?>)</strong></td>
 			<td>&nbsp;</td>
-			<td colspan="13" style="text-align: center;"><strong>(<?= padded_string_center(strtoupper($individu['nama']), 30) ?>)</strong></td>
+			<td colspan="13" style="text-align: center;"><strong>(<?= padded_string_center(strtoupper($individu['nama']), 30)?>)</strong></td>
 			<td colspan="9">&nbsp;</td>
-			<td colspan="12" style="text-align: center;"><strong>(<?= padded_string_center(strtoupper($individu['nama']), 30) ?>)</strong></td>
+			<td colspan="12" style="text-align: center;"><strong>(<?= padded_string_center(strtoupper($individu['nama']), 30)?>)</strong></td>
 			<td>&nbsp;</td>
 		</tr>
 		<tr>
 			<td>&nbsp;</td>
-			<td colspan="11" style="text-align: center;"><?= "NIP&nbsp;&nbsp;:&nbsp;" . str_pad("", 40 * 6, "&nbsp;", STR_PAD_LEFT) ?></td>
+			<td colspan="11" style="text-align: center;"><?= "NIP&nbsp;&nbsp;:&nbsp;".str_pad("",40*6,"&nbsp;",STR_PAD_LEFT)?></td>
 			<td>&nbsp;</td>
-			<td colspan="13" style="text-align: center;"><?= "NIP&nbsp;&nbsp;:&nbsp;" . $penandatangan['nip'] ?></td>
+			<td colspan="13" style="text-align: center;"><?= "NIP&nbsp;&nbsp;:&nbsp;".$penandatangan['nip']?></td>
 			<td colspan="22">&nbsp;</td>
 		</tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
+		
+		<tr><td colspan="48">&nbsp;</td></tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
 		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
-
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
-		<tr>
-			<?php for ($i = 0; $i < 48; $i++) : ?>
+			<?php for ($i=0; $i<48; $i++): ?>
 				<td>&nbsp;</td>
 			<?php endfor; ?>
 		</tr>
 
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
-		<tr>
-			<td colspan="48">&nbsp;</td>
-		</tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
+		<tr><td colspan="48">&nbsp;</td></tr>
 	</table>
 </page>

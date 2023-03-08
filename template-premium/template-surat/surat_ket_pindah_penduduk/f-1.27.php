@@ -504,9 +504,9 @@
 		<p>
 			<strong>Keterangan:</strong><br>
 			*) Diisi Oleh Petugas<br>
-		<p> - Untuk klasifikasi 3 (antar kecamatan dalam satu Kabupaten/Kota) selain ditandatangani oleh Pemohon juga diketahui oleh Kepala Desa/Lurah</p>
+				<p> - Untuk klasifikasi 3 (antar kecamatan dalam satu Kabupaten/Kota) selain ditandatangani oleh Pemohon juga diketahui oleh Kepala Desa/Lurah</p>
 		</p>
-	<?php endif; ?>
+	<?php endif;?>
 	<?php if ($input['kode_format'] == 'F-1.27') : ?>
 		<table class="ttd">
 			<col style="width:35%">
@@ -547,7 +547,7 @@
 			<strong>Keterangan:</strong><br>
 			*) Diisi Oleh Petugas
 		</p>
-	<?php endif; ?>
+	<?php endif;?>
 	<?php if ($input['kode_format'] == 'F-1.39') : ?>
 		<table class="ttd">
 			<col style="width:35%">
@@ -587,10 +587,10 @@
 		<p>
 			<strong>Keterangan:</strong><br>
 			*) Diisi Oleh Petugas<br>
-			- Lembar 1 dibawa dan diarsipkan di Dinas Kependudukan dan Pencatatan Sipil.<br>
-			- Lembar 2 untuk pemohon.<br>
-			- Lembar 3 diarsipkan di Kecamatan.
+					- Lembar 1 dibawa dan diarsipkan di Dinas Kependudukan dan Pencatatan Sipil.<br>
+					- Lembar 2 untuk pemohon.<br>
+					- Lembar 3 diarsipkan di Kecamatan.
 		</p>
-	<?php endif; ?>
+	<?php endif;?>
 
 </page>

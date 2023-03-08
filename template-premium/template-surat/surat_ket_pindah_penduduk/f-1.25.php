@@ -482,7 +482,7 @@
 		</tr>
 		<tr>
 			<td>Mengetahui,</td>
-			<td></td>
+			<td>Mengetahui,</td>
 			<td>Pemohon,</td>
 		</tr>
 		<tr>
