@@ -6,9 +6,7 @@
 
 <page orientation="portrait" format="F4" style="font-size: 8pt">
     <table align="right" style="padding: 5px 20px; border: solid 1px black;">
-        <tr>
-            <td><strong style="font-size: 14pt;">F-1.02</strong></td>
-        </tr>
+        <tr><td><strong style="font-size: 14pt;">F-1.02</strong></td></tr>
     </table>
     <p style="text-align: center; margin-top: 40px;">
         <strong style="font-size: 10pt;">FORMULIR PENDAFTARAN PERISTIWA KEPENDUDUKAN</strong>
@@ -45,9 +43,7 @@
             <td colspan="27" class="kotak"><?= $individu['no_kk'] ?></td>
         </tr>
 
-        <tr>
-            <td>&nbsp;</td>
-        </tr>
+        <tr><td>&nbsp;</td></tr>
         <tr>
             <td class="tengah">II.</td>
             <td colspan="47">JENIS PERMOHONAN:</td>
@@ -211,9 +207,7 @@
     <table class="disdukcapil" style="margin-top: 0px;">
         <col span="48" style="width: 2.0833%;">
 
-        <tr>
-            <td>&nbsp;</td>
-        </tr>
+        <tr><td>&nbsp;</td></tr>
         <tr>
             <td class="tengah">III.</td>
             <td colspan="47">PERSYARATAN YANG DILAMPIRKAN:</td>
@@ -276,12 +270,8 @@
             <td class="tengah"><span style="font-size: 14pt;">O</span></td>
             <td>Kartu izin tinggal tetap</td>
         </tr>
-        <tr>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-        </tr>
+        <tr><td>&nbsp;</td></tr>
+        <tr><td>&nbsp;</td></tr>
     </table>
 
     <table class="ttd" style="margin-top: 15px">
@@ -305,14 +295,10 @@
             <td class="center">Pemohon,</td>
             <td>&nbsp;</td>
         </tr>
-        <tr>
-            <td colspan="7" style="height: 30px;">&nbsp;</td>
-        </tr>
+        <tr><td colspan="7" style="height: 30px;">&nbsp;</td></tr>
         <tr>
             <td>&nbsp;</td>
-            <td class="center">
-                <div>(<?= str_pad("", 390, "&nbsp;") ?>)</div>
-            </td>
+            <td class="center"><div>(<?= str_pad("", 300,"&nbsp;")?>)</div></td>
             <td>&nbsp;</td>
             <td class="center"><?= $individu['nama'] ?></td>
             <td>&nbsp;</td>
