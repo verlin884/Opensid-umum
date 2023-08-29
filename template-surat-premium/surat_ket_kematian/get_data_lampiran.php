@@ -145,5 +145,3 @@
     $input['alamat_kematian'] = $individu['alamat'];
     $input['rt_kematian'] = $individu['rt'];
     $input['rw_kematian'] = $individu['rw'];
-
-?>
